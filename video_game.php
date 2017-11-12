@@ -75,16 +75,16 @@ if(isset($_GET["submitButton"])) {
         <div id="nav">
     <div id="nav_wrapper">
         <ul>
-            <li><a href="/workspace/index.php">Home</a>
+            <li><a href="/index.php">Home</a>
             </li>
             <li> <a href="#">Store Department</a>
 
                 <ul>
-                    <li><a href="/workspace/anime.php">Anime</a>
+                    <li><a href="/anime.php">Anime</a>
                     </li>
-                    <li><a href="/workspace/movie.php">Movies</a>
+                    <li><a href="/movie.php">Movies</a>
                     </li>
-                    <li><a href="/workspace/clear_cart.php">Cart</a>
+                    <li><a href="/clear_cart.php">Cart</a>
                     </li>
                 </ul>
             </li>

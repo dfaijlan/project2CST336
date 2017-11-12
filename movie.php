@@ -67,7 +67,7 @@ if(isset($_GET["submitButton"])) {
     <head>
         <meta charset="utf-8">
         <title>Movie</title>
-        <link rel ="stylesheet" href="/workspace/style.css">
+        <link rel ="stylesheet" href="/style.css">
         <link href="https://fonts.googleapis.com/css?family=Bungee+Shade" rel="stylesheet">
         <h1 id="mfont">Movie</h1>
     </head>
@@ -75,16 +75,16 @@ if(isset($_GET["submitButton"])) {
             <div id="nav">
     <div id="nav_wrapper">
         <ul>
-            <li><a href="/workspace/index.php">Home</a>
+            <li><a href="/index.php">Home</a>
             </li>
             <li> <a href="#">Store Department</a>
 
                 <ul>
-                    <li><a href="/workspace/anime.php">Anime</a>
+                    <li><a href="/anime.php">Anime</a>
                     </li>
-                    <li><a href="/workspace/video_game.php">Videogames</a>
+                    <li><a href="/video_game.php">Videogames</a>
                     </li>
-                    <li><a href="/workspace/clear_cart.php">Cart</a>
+                    <li><a href="/clear_cart.php">Cart</a>
                     </li>
                 </ul>
             </li>
