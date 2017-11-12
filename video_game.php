@@ -67,7 +67,7 @@ if(isset($_GET["submitButton"])) {
     <head>
         <meta charset="utf-8">
         <title>Video Games</title>
-        <link rel ="stylesheet" href="/workspace/style.css">
+        <link rel ="stylesheet" href="/style.css">
         <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
         <h1 id="vgames">Video Games</h1>
     </head>
