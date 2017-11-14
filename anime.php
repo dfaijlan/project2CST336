@@ -15,6 +15,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+
 if(isset($_GET["submitButton"])) {
     $anime_name = $_GET["anime_name"];
     $anime_price = $_GET["anime_price"];
@@ -43,8 +44,12 @@ if(isset($_GET["submitButton"])) {
         }
     }
     if (isset($_GET["sort_by_option"])) {
+        
         $value = $_GET["sort_by_option"];
-        $sql = $sql . " ORDER BY $value";
+        if ($value != "") {
+            $sql = $sql . " ORDER BY $value";
+        }
+        
     }
     if (isset($_GET["order_radio"])) {
         $value = $_GET["order_radio"];
@@ -52,6 +57,8 @@ if(isset($_GET["submitButton"])) {
             $sql = $sql . " desc";
         }
     }
+    echo $sql;
+    echo "<br>";
     $result = $conn->query($sql);
     
     if ($result->num_rows > 0) {

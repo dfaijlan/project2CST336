@@ -44,7 +44,9 @@ if(isset($_GET["submitButton"])) {
     }
     if (isset($_GET["sort_by_option"])) {
         $value = $_GET["sort_by_option"];
-        $sql = $sql . " ORDER BY $value";
+        if ($value != "") {
+            $sql = $sql . " ORDER BY $value";
+        }
     }
     if (isset($_GET["order_radio"])) {
         $value = $_GET["order_radio"];
