@@ -121,13 +121,13 @@ if(isset($_GET["submitButton"])) {
                             <option value = "http://www.ign.com/games/cuphead/">Cuphead.</option>
                             <option value = "http://www.ign.com/games/dungeon-fighter-online/">DFO.</option>
                             <option value = "http://www.ign.com/games/kingdom-hearts/ps2-16467/">Kingdom Hearts.</option>
-                            <option value = "http://www.ign.com/games/super-smash-bros/n64-10494/">Kingdom Hearts 2.</option>
+                            <option value = "http://www.ign.com/games/kingdom-hearts-ii/ps2-550308/">Kingdom Hearts 2.</option>
                             <option value = "http://www.ign.com/games/league-of-legends/">League of Legends.</option>
                             <option value = "http://www.ign.com/games/lost-saga-167231/">Lost Saga.</option>
                             <option value = "http://maplestory.nexon.net/landing/">Maplestory.</option>
                             <option value = "http://www.ign.com/articles/1999/10/08/marvel-vs-capcom-clash-of-super-heroes-review/">Marvel vs Capcom.</option>
                             <option value = "http://www.ign.com/articles/2017/09/18/marvel-vs-capcom-infinite-review/">Marvel vs Capcom Infite Wars.</option>
-                            <option value = "http://www.ign.com/games/super-smash-bros/n64-10494/">Megaman Battle Network.</option>
+                            <option value = "http://www.ign.com/games/mega-man-battle-network/gba-15252/">Megaman Battle Network.</option>
                             <option value = "http://www.ign.com/games/mega-man-x/snes-6872/">Megaman X.</option>
                             <option value = "http://www.ign.com/games/mega-man-x4/ps-2083/">Megaman X4.</option>
                             <option value = "http://www.ign.com/games/mega-man-x8/">Megaman X8.</option>
