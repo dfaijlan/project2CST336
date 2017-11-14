@@ -71,17 +71,18 @@ if(isset($_GET["submitButton"])) {
         <link href="https://fonts.googleapis.com/css?family=Ewert" rel="stylesheet">
         <h1 id="aFont">Anime</h1>
     </head>
-    <body>
-    <div id="nav">
+   <body>
+        <div id="nav">
     <div id="nav_wrapper">
         <ul>
             <li><a href="/index.php">Home</a>
             </li>
             <li> <a href="#">Store Department</a>
+
                 <ul>
-                    <li><a href="/movie.php">Movie</a>
+                    <li><a href="/movie.php">Movies</a>
                     </li>
-                    <li><a href="/video_game.php">Videogames</a>
+                    <li><a href="/video_game.php">Video Games</a>
                     </li>
                     <li><a href="/clear_cart.php">Cart</a>
                     </li>
@@ -89,6 +90,9 @@ if(isset($_GET["submitButton"])) {
             </li>
         </ul>
     </div>
+    <!-- Nav wrapper end -->
+</div>
+<!-- Nav end -->
         <form>
             <fieldset id="filter_by_name">
                 Filter by Name:

@@ -72,7 +72,7 @@ if(isset($_GET["submitButton"])) {
         <h1 id="mfont">Movie</h1>
     </head>
     <body>
-            <div id="nav">
+        <div id="nav">
     <div id="nav_wrapper">
         <ul>
             <li><a href="/index.php">Home</a>
@@ -82,7 +82,7 @@ if(isset($_GET["submitButton"])) {
                 <ul>
                     <li><a href="/anime.php">Anime</a>
                     </li>
-                    <li><a href="/video_game.php">Videogames</a>
+                    <li><a href="/video_game.php">Video Games</a>
                     </li>
                     <li><a href="/clear_cart.php">Cart</a>
                     </li>
@@ -90,6 +90,9 @@ if(isset($_GET["submitButton"])) {
             </li>
         </ul>
     </div>
+    <!-- Nav wrapper end -->
+</div>
+<!-- Nav end -->
         <form>
             <fieldset id="filter_by_name">
                 Filter by Name:
