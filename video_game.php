@@ -93,7 +93,7 @@ if(isset($_GET["submitButton"])) {
     <!-- Nav wrapper end -->
 </div>
 <!-- Nav end -->
-        <form>
+        <form id="vgames">
             <fieldset id="filter_by_name">
                 Filter by Name:
                 <input type="Radio" name="filter_by_name_radio" value="name">

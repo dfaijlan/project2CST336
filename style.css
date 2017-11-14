@@ -44,7 +44,7 @@
     color: #699;
 }
 
-#vgames{
+#vgames,fieldset{
   font-family: 'Press Start 2P', cursive;
 }
 #mfont{
@@ -55,3 +55,4 @@
     font-family: 'Ewert', cursive;
 
 }
+
