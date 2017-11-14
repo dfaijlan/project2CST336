@@ -88,6 +88,21 @@ if(isset($_GET["submitButton"])) {
                     </li>
                 </ul>
             </li>
+             <li> 
+                <a href="#">Animes Titles</a>
+                 <ul>
+                       <li><a href = "https://myanimelist.net/anime/30276/One_Punch_Man/">One Punch Man.</a>
+                       <li><a href = "https://myanimelist.net/manga/1517/JoJo_no_Kimyou_na_Bouken_Part_1__Phantom_Blood/">JJBA Part 1.</a>
+                       <li><a href = "https://myanimelist.net/manga/1630/JoJo_no_Kimyou_na_Bouken_Part_2__Sentou_Chuuryuu/">JJBA Part 2.</a>
+                       <li><a href = "https://myanimelist.net/manga/872/JoJo_no_Kimyou_na_Bouken_Part_3__Stardust_Crusaders/">JJBA Part 3.</a>
+                       <li><a href = "https://myanimelist.net/manga/3006/JoJo_no_Kimyou_na_Bouken_Part_4__Diamond_wa_Kudakenai/">JJBA Part 4.</a>
+                       <li><a href = "https://myanimelist.net/manga/75989/Boku_no_Hero_Academia/">My Hero Academia Sea.</a>
+                       <li><a href = "https://myanimelist.net/anime/35262/Boku_no_Hero_Academia_2nd_Season__Hero_Note/">My Hero Academia Sea 2.</a>
+                       <li><a href = "https://myanimelist.net/manga/53/Yuu%E2%98%86Yuu%E2%98%86Hakusho/">Yu Yu Hakusho.</a>
+                       <li><a href = "https://myanimelist.net/anime/1604/Katekyo_Hitman_Reborn?q=hitman%20re/">Hitman Reborn.</a>
+                       <li><a href = "https://myanimelist.net/anime/20/Naruto/">Naruto.</a>
+                 </ul>
+         </li>
         </ul>
     </div>
     <!-- Nav wrapper end -->
@@ -112,37 +127,39 @@ if(isset($_GET["submitButton"])) {
                 Release Year:
                 <input type="text" name="anime_release_year">
             </fieldset>
-            <fieldset id="item_info">
-                Item Info:
-                  <form name="Anime">
-                        <select name="Anime" id="animeMenu">
-                            <option value = "nothing" selected ="selected">Select an Anime</option>
-                            <option value = "https://myanimelist.net/anime/30276/One_Punch_Man/">One Punch Man.</option>
-                            <option value = "https://myanimelist.net/manga/1517/JoJo_no_Kimyou_na_Bouken_Part_1__Phantom_Blood/">JJBA Part 1.</option>
-                            <option value = "https://myanimelist.net/manga/1630/JoJo_no_Kimyou_na_Bouken_Part_2__Sentou_Chuuryuu/">JJBA Part 2.</option>
-                            <option value = "https://myanimelist.net/manga/872/JoJo_no_Kimyou_na_Bouken_Part_3__Stardust_Crusaders/">JJBA Part 3.</option>
-                            <option value = "https://myanimelist.net/manga/3006/JoJo_no_Kimyou_na_Bouken_Part_4__Diamond_wa_Kudakenai/">JJBA Part 4.</option>
-                            <option value = "https://myanimelist.net/manga/75989/Boku_no_Hero_Academia/">My Hero Academia Sea.</option>
-                            <option value = "https://myanimelist.net/anime/35262/Boku_no_Hero_Academia_2nd_Season__Hero_Note/">My Hero Academia Sea 2.</option>
-                            <option value = "https://myanimelist.net/manga/53/Yuu%E2%98%86Yuu%E2%98%86Hakusho/">Yu Yu Hakusho.</option>
-                            <option value = "https://myanimelist.net/anime/1604/Katekyo_Hitman_Reborn?q=hitman%20re/">Hitman Reborn.</option>
-                            <option value = "https://myanimelist.net/anime/20/Naruto/">Naruto.</option>
+            
+            <!--no longer including here conflicting javascript -->
+            <!--<fieldset id="item_info">-->
+            <!--    Item Info:-->
+            <!--      <form name="Anime">-->
+            <!--            <select name="Anime" id="animeMenu">-->
+            <!--                <option value = "nothing" selected ="selected">Select an Anime</option>-->
+            <!--                <option value = "https://myanimelist.net/anime/30276/One_Punch_Man/">One Punch Man.</option>-->
+            <!--                <option value = "https://myanimelist.net/manga/1517/JoJo_no_Kimyou_na_Bouken_Part_1__Phantom_Blood/">JJBA Part 1.</option>-->
+            <!--                <option value = "https://myanimelist.net/manga/1630/JoJo_no_Kimyou_na_Bouken_Part_2__Sentou_Chuuryuu/">JJBA Part 2.</option>-->
+            <!--                <option value = "https://myanimelist.net/manga/872/JoJo_no_Kimyou_na_Bouken_Part_3__Stardust_Crusaders/">JJBA Part 3.</option>-->
+            <!--                <option value = "https://myanimelist.net/manga/3006/JoJo_no_Kimyou_na_Bouken_Part_4__Diamond_wa_Kudakenai/">JJBA Part 4.</option>-->
+            <!--                <option value = "https://myanimelist.net/manga/75989/Boku_no_Hero_Academia/">My Hero Academia Sea.</option>-->
+            <!--                <option value = "https://myanimelist.net/anime/35262/Boku_no_Hero_Academia_2nd_Season__Hero_Note/">My Hero Academia Sea 2.</option>-->
+            <!--                <option value = "https://myanimelist.net/manga/53/Yuu%E2%98%86Yuu%E2%98%86Hakusho/">Yu Yu Hakusho.</option>-->
+            <!--                <option value = "https://myanimelist.net/anime/1604/Katekyo_Hitman_Reborn?q=hitman%20re/">Hitman Reborn.</option>-->
+            <!--                <option value = "https://myanimelist.net/anime/20/Naruto/">Naruto.</option>-->
                             
                      
-                        </select>
-                    </form>
+            <!--            </select>-->
+            <!--        </form>-->
                     
-                    <script type="text/javascript">
-                        var urlMenu = document.getElementById('animeMenu');
-                        urlMenu.onchange = function(){
-                            var userOption = this.options[this.selectedIndex];
-                            if(userOption.value !="nothing"){
-                                window.open(userOption.value, "Anime Page", "");
-                            }
-                        }
+            <!--        <script type="text/javascript">-->
+            <!--            var urlMenu = document.getElementById('animeMenu');-->
+            <!--            urlMenu.onchange = function(){-->
+            <!--                var userOption = this.options[this.selectedIndex];-->
+            <!--                if(userOption.value !="nothing"){-->
+            <!--                    window.open(userOption.value, "Anime Page", "");-->
+            <!--                }-->
+            <!--            }-->
                         
-                    </script>
-            </fieldset>
+            <!--        </script>-->
+            <!--</fieldset>-->
             <fieldset id="sort_field">
                 Order results by:
                 <select name="sort_by_option">

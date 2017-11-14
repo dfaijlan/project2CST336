@@ -88,6 +88,22 @@ if(isset($_GET["submitButton"])) {
                     </li>
                 </ul>
             </li>
+            <li> 
+                <a href="#">Movie Titles</a>
+                 <ul>
+                       <li><a href = "https://www.rottentomatoes.com/m/kung_fu_panda/">Kung Fu Panda.</a>
+                       <li><a href = "https://www.rottentomatoes.com/m/bee_movie/">Bee Movie.</a>
+                       <li><a href = "https://www.rottentomatoes.com/m/avatar/">Avatar.</a>
+                       <li><a href = "https://www.rottentomatoes.com/m/moana_2016/">Moana.</a>
+                       <li><a href = "https://www.rottentomatoes.com/m/zootopia/">Zootopia.</a>
+                       <li><a href = "https://www.rottentomatoes.com/m/frozen_2013/">Frozen.</a>
+                       <li><a href = "https://www.rottentomatoes.com/m/trolls/">Trolls.</a>
+                       <li><a href = "https://www.rottentomatoes.com/m/the_emoji_movie/">Emoji Movie.</a>
+                       <li><a href = "https://www.rottentomatoes.com/m/mulan/">Mulan.</a>
+                       <li><a href = "https://www.rottentomatoes.com/m/toy_story/">Toy Story.</a>
+                       <li><a href = "https://www.rottentomatoes.com/m/toy_story_2/">Toy Story 2.</a>
+                 </ul>
+         </li>
         </ul>
     </div>
     <!-- Nav wrapper end -->
@@ -112,36 +128,36 @@ if(isset($_GET["submitButton"])) {
                 Release Year:
                 <input type="text" name="movie_release_year">
             </fieldset>
-                <fieldset id="item_info">
-                Item Info:
-                  <form name="movie">
-                        <select name="movie" id="movieMenu">
-                            <option value = "nothing" selected ="selected">Select a Film</option>
-                            <option value = "https://www.rottentomatoes.com/m/kung_fu_panda/">Kung Fu Panda.</option>
-                            <option value = "https://www.rottentomatoes.com/m/bee_movie/">Bee Movie.</option>
-                            <option value = "https://www.rottentomatoes.com/m/avatar/">Avatar.</option>
-                            <option value = "https://www.rottentomatoes.com/m/moana_2016/">Moana.</option>
-                            <option value = "https://www.rottentomatoes.com/m/zootopia/">Zootopia.</option>
-                            <option value = "https://www.rottentomatoes.com/m/frozen_2013/">Frozen.</option>
-                            <option value = "https://www.rottentomatoes.com/m/trolls/">Trolls.</option>
-                            <option value = "https://www.rottentomatoes.com/m/the_emoji_movie/">Emoji Movie.</option>
-                            <option value = "https://www.rottentomatoes.com/m/mulan/">Mulan.</option>
-                            <option value = "https://www.rottentomatoes.com/m/toy_story/">Toy Story.</option>
-                            <option value = "https://www.rottentomatoes.com/m/toy_story_2/">Toy Story 2.</option>
-                            <option value = "https://www.rottentomatoes.com/m/toy_story_3/">Toy Story 3.</option>
-                            <option value = "https://www.rottentomatoes.com/m/antman/">Ant Man.</option>
-                        </select>
-                    </form>
-                    <script type="text/javascript">
-                        var urlMenu = document.getElementById('movieMenu');
-                        urlMenu.onchange = function(){
-                            var userOption = this.options[this.selectedIndex];
-                            if(userOption.value !="nothing"){
-                                window.open(userOption.value, "Movies Page", "");
-                            }
-                        }
-                    </script>
-            </fieldset>
+            <!--    <fieldset id="item_info">-->
+            <!--    Item Info:-->
+            <!--      <form name="movie">-->
+            <!--            <select name="movie" id="movieMenu">-->
+            <!--                <option value = "nothing" selected ="selected">Select a Film</option>-->
+            <!--                <option value = "https://www.rottentomatoes.com/m/kung_fu_panda/">Kung Fu Panda.</option>-->
+            <!--                <option value = "https://www.rottentomatoes.com/m/bee_movie/">Bee Movie.</option>-->
+            <!--                <option value = "https://www.rottentomatoes.com/m/avatar/">Avatar.</option>-->
+            <!--                <option value = "https://www.rottentomatoes.com/m/moana_2016/">Moana.</option>-->
+            <!--                <option value = "https://www.rottentomatoes.com/m/zootopia/">Zootopia.</option>-->
+            <!--                <option value = "https://www.rottentomatoes.com/m/frozen_2013/">Frozen.</option>-->
+            <!--                <option value = "https://www.rottentomatoes.com/m/trolls/">Trolls.</option>-->
+            <!--                <option value = "https://www.rottentomatoes.com/m/the_emoji_movie/">Emoji Movie.</option>-->
+            <!--                <option value = "https://www.rottentomatoes.com/m/mulan/">Mulan.</option>-->
+            <!--                <option value = "https://www.rottentomatoes.com/m/toy_story/">Toy Story.</option>-->
+            <!--                <option value = "https://www.rottentomatoes.com/m/toy_story_2/">Toy Story 2.</option>-->
+            <!--                <option value = "https://www.rottentomatoes.com/m/toy_story_3/">Toy Story 3.</option>-->
+            <!--                <option value = "https://www.rottentomatoes.com/m/antman/">Ant Man.</option>-->
+            <!--            </select>-->
+            <!--        </form>-->
+            <!--        <script type="text/javascript">-->
+            <!--            var urlMenu = document.getElementById('movieMenu');-->
+            <!--            urlMenu.onchange = function(){-->
+            <!--                var userOption = this.options[this.selectedIndex];-->
+            <!--                if(userOption.value !="nothing"){-->
+            <!--                    window.open(userOption.value, "Movies Page", "");-->
+            <!--                }-->
+            <!--            }-->
+            <!--        </script>-->
+            <!--</fieldset>-->
             <fieldset id="sort_field">
                 Order results by:
                 <select name="sort_by_option">

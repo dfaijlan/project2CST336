@@ -87,6 +87,29 @@ if(isset($_GET["submitButton"])) {
                     <li><a href="/clear_cart.php">Cart</a>
                     </li>
                 </ul>
+                <li> 
+                <a href="#">Video Game Titles</a>
+                 <ul>
+                       
+                            <li><a href  = "http://www.ign.com/games/battle-fantasia/xbox-360-14246645/">Batlle Fantasia.</a>
+                            <li><a href  = "http://www.ign.com/games/cuphead/">Cuphead.</a>
+                            <li><a href = "http://www.ign.com/games/dungeon-fighter-online/">DFO.</a>
+                            <li><a href = "http://www.ign.com/games/kingdom-hearts/ps2-16467/">Kingdom Hearts.</a>
+                            <li><a href = "http://www.ign.com/games/kingdom-hearts-ii/ps2-550308/">Kingdom Hearts 2.</a>
+                            <li><a href = "http://www.ign.com/games/league-of-legends/">League of Legends.</a>
+                            <li><a href = "http://www.ign.com/games/lost-saga-167231/">Lost Saga.</a>
+                            <li><a href = "http://maplestory.nexon.net/landing/">Maplestory.</a>
+                            <li><a href = "http://www.ign.com/articles/1999/10/08/marvel-vs-capcom-clash-of-super-heroes-review/">Marvel vs Capcom.</a>
+                            <li><a href = "http://www.ign.com/articles/2017/09/18/marvel-vs-capcom-infinite-review/">Marvel vs Capcom Infite Wars.</a>
+                            <li><a href = "http://www.ign.com/games/mega-man-battle-network/gba-15252/">Megaman Battle Network.</a>
+                            <li><a href = "http://www.ign.com/games/mega-man-x/snes-6872/">Megaman X.</a>
+                            <li><a href = "http://www.ign.com/games/mega-man-x4/ps-2083/">Megaman X4.</a>
+                            <li><a href = "http://www.ign.com/games/mega-man-x8/">Megaman X8.</a>
+                            <li><a href = "http://www.ign.com/games/mega-man-zx/">Megaman ZX Adventures.</a>
+                            <li><a href = "http://www.ign.com/games/super-smash-bros/n64-10494/">Super Smash Bros.</a>
+                            <li><a href = "http://www.ign.com/games/super-smash-bros-melee/">Super Smash Bros Melee.</a>
+            <               <li><a href = "http://www.ign.com/games/the-world-ends-with-you/">The World Ends With You.</a>
+                 </ul>
             </li>
         </ul>
     </div>
@@ -112,43 +135,43 @@ if(isset($_GET["submitButton"])) {
                 Release Year:
                 <input type="text" name="video_game_release_year">
             </fieldset>
-            <fieldset id="item_info">
-                Item Info:
-                  <form name="games">
-                        <select name="games" id="gamesMenu">
-                            <option value = "nothing" selected ="selected">Select a game</option>
-                            <option value = "http://www.ign.com/games/battle-fantasia/xbox-360-14246645/">Batlle Fantasia.</option>
-                            <option value = "http://www.ign.com/games/cuphead/">Cuphead.</option>
-                            <option value = "http://www.ign.com/games/dungeon-fighter-online/">DFO.</option>
-                            <option value = "http://www.ign.com/games/kingdom-hearts/ps2-16467/">Kingdom Hearts.</option>
-                            <option value = "http://www.ign.com/games/kingdom-hearts-ii/ps2-550308/">Kingdom Hearts 2.</option>
-                            <option value = "http://www.ign.com/games/league-of-legends/">League of Legends.</option>
-                            <option value = "http://www.ign.com/games/lost-saga-167231/">Lost Saga.</option>
-                            <option value = "http://maplestory.nexon.net/landing/">Maplestory.</option>
-                            <option value = "http://www.ign.com/articles/1999/10/08/marvel-vs-capcom-clash-of-super-heroes-review/">Marvel vs Capcom.</option>
-                            <option value = "http://www.ign.com/articles/2017/09/18/marvel-vs-capcom-infinite-review/">Marvel vs Capcom Infite Wars.</option>
-                            <option value = "http://www.ign.com/games/mega-man-battle-network/gba-15252/">Megaman Battle Network.</option>
-                            <option value = "http://www.ign.com/games/mega-man-x/snes-6872/">Megaman X.</option>
-                            <option value = "http://www.ign.com/games/mega-man-x4/ps-2083/">Megaman X4.</option>
-                            <option value = "http://www.ign.com/games/mega-man-x8/">Megaman X8.</option>
-                            <option value = "http://www.ign.com/games/mega-man-zx/">Megaman ZX Adventures.</option>
-                            <option value = "http://www.ign.com/games/super-smash-bros/n64-10494/">Super Smash Bros.</option>
-                            <option value = "http://www.ign.com/games/super-smash-bros-melee/">Super Smash Bros Melee.</option>
-                            <option value = "http://www.ign.com/games/the-world-ends-with-you/">The World Ends With You.</option>
-                        </select>
-                    </form>
+            <!--<fieldset id="item_info">-->
+            <!--    Item Info:-->
+            <!--      <form name="games">-->
+            <!--            <select name="games" id="gamesMenu">-->
+            <!--                <option value = "nothing" selected ="selected">Select a game</option>-->
+            <!--                <option value = "http://www.ign.com/games/battle-fantasia/xbox-360-14246645/">Batlle Fantasia.</option>-->
+            <!--                <option value = "http://www.ign.com/games/cuphead/">Cuphead.</option>-->
+            <!--                <option value = "http://www.ign.com/games/dungeon-fighter-online/">DFO.</option>-->
+            <!--                <option value = "http://www.ign.com/games/kingdom-hearts/ps2-16467/">Kingdom Hearts.</option>-->
+            <!--                <option value = "http://www.ign.com/games/kingdom-hearts-ii/ps2-550308/">Kingdom Hearts 2.</option>-->
+            <!--                <option value = "http://www.ign.com/games/league-of-legends/">League of Legends.</option>-->
+            <!--                <option value = "http://www.ign.com/games/lost-saga-167231/">Lost Saga.</option>-->
+            <!--                <option value = "http://maplestory.nexon.net/landing/">Maplestory.</option>-->
+            <!--                <option value = "http://www.ign.com/articles/1999/10/08/marvel-vs-capcom-clash-of-super-heroes-review/">Marvel vs Capcom.</option>-->
+            <!--                <option value = "http://www.ign.com/articles/2017/09/18/marvel-vs-capcom-infinite-review/">Marvel vs Capcom Infite Wars.</option>-->
+            <!--                <option value = "http://www.ign.com/games/mega-man-battle-network/gba-15252/">Megaman Battle Network.</option>-->
+            <!--                <option value = "http://www.ign.com/games/mega-man-x/snes-6872/">Megaman X.</option>-->
+            <!--                <option value = "http://www.ign.com/games/mega-man-x4/ps-2083/">Megaman X4.</option>-->
+            <!--                <option value = "http://www.ign.com/games/mega-man-x8/">Megaman X8.</option>-->
+            <!--                <option value = "http://www.ign.com/games/mega-man-zx/">Megaman ZX Adventures.</option>-->
+            <!--                <option value = "http://www.ign.com/games/super-smash-bros/n64-10494/">Super Smash Bros.</option>-->
+            <!--                <option value = "http://www.ign.com/games/super-smash-bros-melee/">Super Smash Bros Melee.</option>-->
+            <!--                <option value = "http://www.ign.com/games/the-world-ends-with-you/">The World Ends With You.</option>-->
+            <!--            </select>-->
+            <!--        </form>-->
                     
-                    <script type="text/javascript">
-                        var urlMenu = document.getElementById('gamesMenu');
-                        urlMenu.onchange = function(){
-                            var userOption = this.options[this.selectedIndex];
-                            if(userOption.value !="nothing"){
-                                window.open(userOption.value, "Videogames Page", "");
-                            }
-                        }
+            <!--        <script type="text/javascript">-->
+            <!--            var urlMenu = document.getElementById('gamesMenu');-->
+            <!--            urlMenu.onchange = function(){-->
+            <!--                var userOption = this.options[this.selectedIndex];-->
+            <!--                if(userOption.value !="nothing"){-->
+            <!--                    window.open(userOption.value, "Videogames Page", "");-->
+            <!--                }-->
+            <!--            }-->
                         
-                    </script>
-            </fieldset>
+            <!--        </script>-->
+            <!--</fieldset>-->
             <fieldset id="sort_field">
                 Order results by:
                 <select name="sort_by_option">
