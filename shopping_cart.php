@@ -68,7 +68,7 @@ I added a button and page for clearing the cart for the user on this page that w
                 <th>Type</th>
                 <th>Name</th>
                 <th>Price</th>
-                <th>Year</th>
+                <th>Year</th>git 
             </tr>
         <?php
                 $quantity = 0;

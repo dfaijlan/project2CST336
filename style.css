@@ -52,7 +52,7 @@
  font-family: 'Bungee Shade', cursive;
  color:burlywood;
 }
-#aFont{
+#aFont{ 
     font-family: 'Ewert', cursive;
     color:chartreuse;
 }
@@ -71,4 +71,8 @@ td, th {
 
 tr:nth-child(even) {
     background-color: #dddddd;
+}
+
+fieldset {
+    width: 50%;
 }
