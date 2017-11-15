@@ -66,7 +66,8 @@ if ($result->num_rows > 0) {
     //output data of each row
     while($row = $result->fetch_assoc()) {
         echo "<tr><td>" .$row["movie_name"]. "</td><td>".$row["movie_price"]. "</td><td> ".$row["release_year"] ."</td><td>";
-        echo "[<a href='add_to_cart.php?name=" . $row['movie_name'] . "&location=movie'> Add to cart </a>]</td></tr>"; 
+        echo "[<a href='add_to_cart.php?name=" . $row['movie_name'] . "&location=movie'> Add to cart </a>]</td></tr>";
+        
     }
 }
 echo "</table>";
