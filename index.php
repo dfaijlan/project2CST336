@@ -2,7 +2,6 @@
 //Sessions used to store items in shopping cart and allow user to see
 //shopping cart contents
 session_start();
-
                             
 //Might not need this for this page
 //Using Antonio's database
