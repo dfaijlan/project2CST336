@@ -2,34 +2,19 @@
 //Sessions used to store items in shopping cart and allow user to see
 //shopping cart contents
 session_start();
-<<<<<<< HEAD
                             
-=======
-
->>>>>>> 6a7d214d69340e5c2a1de5941f185dacd8210da5
 //Might not need this for this page
 //Using Antonio's database
 $servername = "us-cdbr-iron-east-05.cleardb.net";
 $username = "bfeaad637110cb";
 $password = "c0419d9c";
 $dbname = "heroku_303da836d19345a"; 
-<<<<<<< HEAD
 //Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
-=======
-
-//Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
->>>>>>> 6a7d214d69340e5c2a1de5941f185dacd8210da5
 //Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 6a7d214d69340e5c2a1de5941f185dacd8210da5
 if (isset($_GET["submitButton"])) {
     
     if (!isset($_GET["search_options"])) {
@@ -51,16 +36,11 @@ if (isset($_GET["submitButton"])) {
         }
     }
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 6a7d214d69340e5c2a1de5941f185dacd8210da5
 ?>
 <html>
     <head>
         <title>Online Catalog</title>
         <h1>Online Catalog</h1>
-<<<<<<< HEAD
         <style>
             @import url("style.css");
         </style>
@@ -92,12 +72,6 @@ if (isset($_GET["submitButton"])) {
 <!-- Nav end -->
         <form>
             <br>
-=======
-    </head>
-    <body>
-        
-        <form>
->>>>>>> 6a7d214d69340e5c2a1de5941f185dacd8210da5
             <fieldset id="search_options">
                 Search for:<br>
                 <input type="Radio" name="search_options" value="anime">Anime<br>
@@ -107,15 +81,6 @@ if (isset($_GET["submitButton"])) {
         <fieldset id="submitButton">
             <input type="submit" id="submit" name="submitButton" value="Submit" />
         </fieldset>
-<<<<<<< HEAD
-=======
-        
-        </form>
-        <form action="shopping_cart.php">
-                
-                <input type="submit" id="mainPageButtons" value="View Shopping cart" />
-                
->>>>>>> 6a7d214d69340e5c2a1de5941f185dacd8210da5
         </form>
     </body>
 </html>
