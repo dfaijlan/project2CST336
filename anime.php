@@ -15,7 +15,10 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6a7d214d69340e5c2a1de5941f185dacd8210da5
 if(isset($_GET["submitButton"])) {
     $anime_name = $_GET["anime_name"];
     $anime_price = $_GET["anime_price"];
@@ -44,12 +47,17 @@ if(isset($_GET["submitButton"])) {
         }
     }
     if (isset($_GET["sort_by_option"])) {
+<<<<<<< HEAD
         
         $value = $_GET["sort_by_option"];
         if ($value != "") {
             $sql = $sql . " ORDER BY $value";
         }
         
+=======
+        $value = $_GET["sort_by_option"];
+        $sql = $sql . " ORDER BY $value";
+>>>>>>> 6a7d214d69340e5c2a1de5941f185dacd8210da5
     }
     if (isset($_GET["order_radio"])) {
         $value = $_GET["order_radio"];
