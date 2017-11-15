@@ -2,19 +2,6 @@
 //Sessions used to store items in shopping cart and allow user to see
 //shopping cart contents
 session_start();
-                            
-//Might not need this for this page
-//Using Antonio's database
-$servername = "us-cdbr-iron-east-05.cleardb.net";
-$username = "bfeaad637110cb";
-$password = "c0419d9c";
-$dbname = "heroku_303da836d19345a"; 
-//Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-//Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
 if (isset($_GET["submitButton"])) {
     
     if (!isset($_GET["search_options"])) {

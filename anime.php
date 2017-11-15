@@ -1,17 +1,11 @@
 <?php
 session_start();
+include 'database.php';
+
 function search() {
 //Using Antonio's database
-$servername = "us-cdbr-iron-east-05.cleardb.net";
-$username = "bfeaad637110cb";
-$password = "c0419d9c";
-$dbname = "heroku_303da836d19345a"; 
-//Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-//Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+$conn = connectDB();
+
 $sql = "SELECT *
         FROM anime
         WHERE 1";
