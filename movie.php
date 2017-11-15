@@ -1,26 +1,47 @@
 <?php
 session_start();
+<<<<<<< HEAD
 function search() {
+=======
+
+>>>>>>> 6a7d214d69340e5c2a1de5941f185dacd8210da5
 //Using Antonio's database
 $servername = "us-cdbr-iron-east-05.cleardb.net";
 $username = "bfeaad637110cb";
 $password = "c0419d9c";
 $dbname = "heroku_303da836d19345a"; 
+<<<<<<< HEAD
 //Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
+=======
+
+//Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+>>>>>>> 6a7d214d69340e5c2a1de5941f185dacd8210da5
 //Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
+<<<<<<< HEAD
 $sql = "SELECT *
             FROM movie
             WHERE 1";
             
+=======
+
+>>>>>>> 6a7d214d69340e5c2a1de5941f185dacd8210da5
 if(isset($_GET["submitButton"])) {
     $movie_name = $_GET["movie_name"];
     $movie_price = $_GET["movie_price"];
     $release_year = $_GET["movie_release_year"];
     
+<<<<<<< HEAD
+=======
+    $sql = "SELECT *
+            FROM movie
+            WHERE 1";
+>>>>>>> 6a7d214d69340e5c2a1de5941f185dacd8210da5
             
     if (isset($_GET["filter_by_name_radio"])) {
         $sql = $sql . " AND movie_name = '$movie_name'";
@@ -42,9 +63,13 @@ if(isset($_GET["submitButton"])) {
     }
     if (isset($_GET["sort_by_option"])) {
         $value = $_GET["sort_by_option"];
+<<<<<<< HEAD
         if ($value != "") {
             $sql = $sql . " ORDER BY $value";
         }
+=======
+        $sql = $sql . " ORDER BY $value";
+>>>>>>> 6a7d214d69340e5c2a1de5941f185dacd8210da5
     }
     if (isset($_GET["order_radio"])) {
         $value = $_GET["order_radio"];
@@ -52,6 +77,7 @@ if(isset($_GET["submitButton"])) {
             $sql = $sql . " desc";
         }
     }
+<<<<<<< HEAD
   
 }
 $result = $conn->query($sql);
@@ -120,6 +146,26 @@ echo "</table>";
 </div>
 <!-- Nav end -->
         <form id="mfont">
+=======
+    $result = $conn->query($sql);
+    
+    if ($result->num_rows > 0) {
+        //output data of each row
+        while($row = $result->fetch_assoc()) {
+            echo $row["movie_name"]. " ".$row["movie_price"]. " ".$row["release_year"];
+            echo "<br>";
+        }
+    }
+}
+?>
+<html>
+    <head>
+        <title>Movies</title>
+        <h1>Movies</h1>
+    </head>
+    <body>
+        <form>
+>>>>>>> 6a7d214d69340e5c2a1de5941f185dacd8210da5
             <fieldset id="filter_by_name">
                 Filter by Name:
                 <input type="Radio" name="filter_by_name_radio" value="name">
@@ -138,6 +184,7 @@ echo "</table>";
                 Release Year:
                 <input type="text" name="movie_release_year">
             </fieldset>
+<<<<<<< HEAD
             <!--    <fieldset id="item_info">-->
             <!--    Item Info:-->
             <!--      <form name="movie">-->
@@ -168,6 +215,8 @@ echo "</table>";
             <!--            }-->
             <!--        </script>-->
             <!--</fieldset>-->
+=======
+>>>>>>> 6a7d214d69340e5c2a1de5941f185dacd8210da5
             <fieldset id="sort_field">
                 Order results by:
                 <select name="sort_by_option">
@@ -184,9 +233,12 @@ echo "</table>";
             </fieldset>
             
         </form>
+<<<<<<< HEAD
         
         <?php
             search();
         ?>
+=======
+>>>>>>> 6a7d214d69340e5c2a1de5941f185dacd8210da5
     </body>
 </html>
