@@ -1,28 +1,24 @@
 <?php
 session_start();
-
+function search() {
 //Using Antonio's database
 $servername = "us-cdbr-iron-east-05.cleardb.net";
 $username = "bfeaad637110cb";
 $password = "c0419d9c";
 $dbname = "heroku_303da836d19345a"; 
-
 //Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
-
 //Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-
+$sql = "SELECT *
+            FROM video_game
+            WHERE 1";
 if(isset($_GET["submitButton"])) {
     $video_game_name = $_GET["video_game_name"];
     $video_game_price = $_GET["video_game_price"];
     $release_year = $_GET["video_game_release_year"];
-    
-    $sql = "SELECT *
-            FROM video_game
-            WHERE 1";
             
     if (isset($_GET["filter_by_name_radio"])) {
         $sql = $sql . " AND video_game_name = '$video_game_name'";
@@ -54,15 +50,24 @@ if(isset($_GET["submitButton"])) {
             $sql = $sql . " desc";
         }
     }
-    $result = $conn->query($sql);
+}
+$result = $conn->query($sql);
     
-    if ($result->num_rows > 0) {
-        //output data of each row
-        while($row = $result->fetch_assoc()) {
-            echo $row["video_game_name"]. " ".$row["video_game_price"]. " ".$row["release_year"];
-            echo "<br>";
-        }
+echo "<table>
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Year</th>
+        </tr>";
+        
+if ($result->num_rows > 0) {
+    //output data of each row
+    while($row = $result->fetch_assoc()) {
+        echo "<tr><td>" .$row["video_game_name"]. "</td><td>".$row["video_game_price"]. "</td><td> ".$row["release_year"] ."</td><td>";
+        echo "[<a href='add_to_cart.php?name=" . $row['video_game_name'] . "&location=video_game'> Add to cart </a>]</td></tr>"; 
     }
+}
+echo "</table>";
 }
 ?>
 <html>
@@ -86,7 +91,7 @@ if(isset($_GET["submitButton"])) {
                     </li>
                     <li><a href="/movie.php">Movies</a>
                     </li>
-                    <li><a href="/clear_cart.php">Cart</a>
+                    <li><a href="/shopping_cart.php">Cart</a>
                     </li>
                 </ul>
                 <li> 
@@ -190,5 +195,8 @@ if(isset($_GET["submitButton"])) {
             </fieldset>
             
         </form>
+        <?php 
+            search();
+        ?>
     </body>
 </html>
