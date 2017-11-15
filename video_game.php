@@ -1,6 +1,7 @@
 <?php
 session_start();
 
+function search() {
 //Using Antonio's database
 $servername = "us-cdbr-iron-east-05.cleardb.net";
 $username = "bfeaad637110cb";
@@ -15,14 +16,14 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+$sql = "SELECT *
+            FROM video_game
+            WHERE 1";
+
 if(isset($_GET["submitButton"])) {
     $video_game_name = $_GET["video_game_name"];
     $video_game_price = $_GET["video_game_price"];
     $release_year = $_GET["video_game_release_year"];
-    
-    $sql = "SELECT *
-            FROM video_game
-            WHERE 1";
             
     if (isset($_GET["filter_by_name_radio"])) {
         $sql = $sql . " AND video_game_name = '$video_game_name'";
@@ -54,23 +55,24 @@ if(isset($_GET["submitButton"])) {
             $sql = $sql . " desc";
         }
     }
-    $result = $conn->query($sql);
+}
+$result = $conn->query($sql);
     
-    echo "<table>
-            <tr>
-                <th>Name</th>
-                <th>Price</th>
-                <th>Year</th>
-            </tr>";
-            
-    if ($result->num_rows > 0) {
-        //output data of each row
-        while($row = $result->fetch_assoc()) {
-            echo "<tr><td>" .$row["video_game_name"]. "</td><td>".$row["video_game_price"]. "</td><td> ".$row["release_year"] ."</td><td>";
-            echo "[<a href='add_to_cart.php?name=" . $row['video_game_name'] . "&location=video_game'> Add to cart </a>]</td></tr>"; 
-        }
+echo "<table>
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Year</th>
+        </tr>";
+        
+if ($result->num_rows > 0) {
+    //output data of each row
+    while($row = $result->fetch_assoc()) {
+        echo "<tr><td>" .$row["video_game_name"]. "</td><td>".$row["video_game_price"]. "</td><td> ".$row["release_year"] ."</td><td>";
+        echo "[<a href='add_to_cart.php?name=" . $row['video_game_name'] . "&location=video_game'> Add to cart </a>]</td></tr>"; 
     }
-    echo "</table>";
+}
+echo "</table>";
 }
 ?>
 <html>
@@ -198,5 +200,8 @@ if(isset($_GET["submitButton"])) {
             </fieldset>
             
         </form>
+        <?php 
+            search();
+        ?>
     </body>
 </html>

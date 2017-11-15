@@ -1,6 +1,8 @@
 <?php
 session_start();
 
+
+function search() {
 //Using Antonio's database
 $servername = "us-cdbr-iron-east-05.cleardb.net";
 $username = "bfeaad637110cb";
@@ -16,15 +18,15 @@ if ($conn->connect_error) {
 }
 
 
+$sql = "SELECT *
+        FROM anime
+        WHERE 1";
+            
 if(isset($_GET["submitButton"])) {
     $anime_name = $_GET["anime_name"];
     $anime_price = $_GET["anime_price"];
     $release_year = $_GET["anime_release_year"];
     
-    $sql = "SELECT *
-            FROM anime
-            WHERE 1";
-            
     if (isset($_GET["filter_by_name_radio"])) {
         $sql = $sql . " AND anime_name = '$anime_name'";
         if ($anime_name == "") {
@@ -57,25 +59,24 @@ if(isset($_GET["submitButton"])) {
             $sql = $sql . " desc";
         }
     }
-    echo $sql;
-    echo "<br>";
-    $result = $conn->query($sql);
+}
+$result = $conn->query($sql);
     
-    echo "<table>
-            <tr>
-                <th>Name</th>
-                <th>Price</th>
-                <th>Year</th>
-            </tr>";
-            
-    if ($result->num_rows > 0) {
-        //output data of each row
-        while($row = $result->fetch_assoc()) {
-            echo "<tr><td>" .$row["anime_name"]. "</td><td>".$row["anime_price"]. "</td><td> ".$row["release_year"] ."</td><td>";
-            echo "[<a href='add_to_cart.php?name=" . $row['anime_name'] . "&location=anime'> Add to cart </a>]</td></tr>"; 
-        }
+echo "<table>
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Year</th>
+        </tr>";
+        
+if ($result->num_rows > 0) {
+    //output data of each row
+    while($row = $result->fetch_assoc()) {
+        echo "<tr><td>" .$row["anime_name"]. "</td><td>".$row["anime_price"]. "</td><td> ".$row["release_year"] ."</td><td>";
+        echo "[<a href='add_to_cart.php?name=" . $row['anime_name'] . "&location=anime'> Add to cart </a>]</td></tr>"; 
     }
-    echo "</table>";
+}
+echo "</table>";
 }
 ?>
 <html>
@@ -189,7 +190,9 @@ if(isset($_GET["submitButton"])) {
             <fieldset id="submitButton">
                 <input type="submit" id="submit" name="submitButton" value="Submit" />
             </fieldset>
-            
         </form>
+        <?php
+            search();
+        ?>
     </body>
 </html>
