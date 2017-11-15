@@ -1,6 +1,5 @@
 <?php
 session_start();
-<<<<<<< HEAD
 //Using Antonio's database
 $servername = "us-cdbr-iron-east-05.cleardb.net";
 $username = "bfeaad637110cb";
@@ -13,16 +12,10 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
         
-=======
->>>>>>> 6a7d214d69340e5c2a1de5941f185dacd8210da5
 /* -- Note for teammates:
 Remember that it's specified to use session variables for our shopping cart.
 You can probably store them in an array on the other pages and then print the content out here.
 I added a button and page for clearing the cart for the user on this page that works by destroying the current session.
-<<<<<<< HEAD
-=======
-
->>>>>>> 6a7d214d69340e5c2a1de5941f185dacd8210da5
 */
 ?>
 
@@ -31,7 +24,6 @@ I added a button and page for clearing the cart for the user on this page that w
         <title>Shopping Cart</title>
         <h1>User shopping cart</h1>
     </head>
-<<<<<<< HEAD
      <style>
         @import url("style.css");
     </style>
@@ -106,12 +98,6 @@ I added a button and page for clearing the cart for the user on this page that w
         ?>
         </table>
         <br><br>
-=======
-    <body>
-        <form action="clear_cart.php">
-            <input type="submit" id="cart_page_buttons" value="Clear Shopping Cart" />
-        </form>
->>>>>>> 6a7d214d69340e5c2a1de5941f185dacd8210da5
         <form action="index.php">
             <input type="submit" id="cart_page_buttons" value="Return" />
         </form>
